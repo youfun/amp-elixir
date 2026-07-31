@@ -1,0 +1,22 @@
+{
+  "name": "amp-elixir",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Amp-native persistent Elixir/BEAM runtime and structural editing tools",
+  "license": "MIT",
+  "scripts": {
+    "build": "bun build src/index.ts --target=bun --format=esm --outfile=dist/amp-elixir.js",
+    "check": "tsc --noEmit && bun test",
+    "smoke": "bun scripts/smoke.ts",
+    "install:global": "bun run build && bun scripts/install-global.ts",
+    "install:project": "bun run build && bun scripts/install-project.ts"
+  },
+  "dependencies": {
+    "pi-elixir": "0.8.4"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  }
+}
